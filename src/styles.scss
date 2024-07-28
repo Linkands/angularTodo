@@ -1,1 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+.button {
+    border: 1px solid black;
+    border-radius: 3px;
+    color: #fff;
+    transition: 0.3s;
+    cursor: pointer;
+    padding: 5px;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &:disabled {
+        opacity: 0.4;
+        cursor:not-allowed;
+    }
+}
+
+input,
+textarea {
+    border: 1px solid rgb(188, 188, 188);
+    border-radius: none;
+}
+
+.done {
+    background: rgb(1, 199, 1);
+    border-color: rgb(1, 199, 1);
+}
+
+.delete {
+    background: rgb(251, 21, 21);
+    border-color: rgb(251, 21, 21);
+}
+
+p, span {
+    font-size: 12px;
+}
+
+body {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 0 30px;
+}

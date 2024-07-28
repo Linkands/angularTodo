@@ -1,0 +1,12 @@
+<div class="item">
+    <div class="heading">
+        <h3>{{ todoItem.title }}</h3>
+        <img *ngIf="todoItem.isDone" class="ready-icon" src="https://cdn-icons-png.flaticon.com/256/6276/6276686.png">
+    </div>
+    <p>{{ todoItem.goal }}</p>
+    <p>{{ todoItem.date }}</p>
+    <div class="buttons">
+        <button class="button done" [disabled]="todoItem.isDone" (click)="onDone()">Done</button>
+        <button class="button delete" [disabled]="todoItem.isDone" (click)="onDelete()">Delete</button>
+    </div>
+</div>

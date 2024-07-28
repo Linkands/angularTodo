@@ -1,0 +1,22 @@
+<div>
+    <h2>Add TODO</h2>
+    <form (ngSubmit)="addTodo()">
+        <div class="input-wrapper">
+            <label>Title</label>
+            <input [(ngModel)]="newTitle" required name="title">
+        </div>
+        <div class="input-wrapper">
+            <label>Goal</label>
+            <textarea [(ngModel)]="newGoal" required name="goal"></textarea>
+        </div>
+        <button class="button done" type="submit">Add</button>
+    </form>
+</div>
+<div *ngIf="todoItemList.length > 0">
+    <h2>TODO list</h2>
+    <ul>
+        <li *ngFor="let todoItem of todoItemList; let i = index">
+            <app-todo-item [todoItem]="todoItem" (done)="markAsDone(i)" (delete)="deleteTodo(i)"></app-todo-item>
+        </li>
+    </ul>
+</div>
